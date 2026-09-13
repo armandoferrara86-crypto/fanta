@@ -84,6 +84,10 @@ il lavoro: non ometterla mai.
 | `storico/2026-27/` | Un file per giornata: notizie raccolte e formazione consigliata. |
 | `docs/` | Pagina web pubblica per Armando e Mirko (GitHub Pages). `docs/dati.js` non si scrive a mano: lo rigenera `python3 strumenti/genera_sito.py`. |
 | `strumenti/genera_sito.py` | Costruisce `docs/dati.js` dai file sopra. |
+| `.github/workflows/rilancia.yml` | Pulsante "Run workflow" su GitHub: rifà il consiglio con Claude (abbonamento di Armando, segreto `CLAUDE_CODE_OAUTH_TOKEN`) e ripubblica la pagina. |
+
+Agenti: `ricognitore` (notizie), `statistico` (numeri della stagione), `allenatore`
+(sceglie leggendo solo i due file prodotti dagli altri).
 
 **Il repository GitHub è pubblico**: tutto quello che finisce in questa cartella
 (tranne `in/`, esclusa da `.gitignore`) è visibile a chiunque. Non scriverci mai
