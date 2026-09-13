@@ -73,6 +73,8 @@ select{font:inherit;padding:8px 10px;border-radius:10px;border:1px solid var(--l
 .md blockquote{margin:8px 0;padding:6px 12px;border-left:3px solid var(--accent);color:var(--muted)}
 .md table{margin:8px 0}.md td,.md th{white-space:normal}
 .md hr{border:0;border-top:1px solid var(--line);margin:14px 0}
+.btn{display:inline-block;text-decoration:none;font-weight:600;font-size:14px;padding:9px 14px;border-radius:10px;background:var(--accent);color:#fff}
+.btn.ghost{background:var(--accent-soft);color:var(--accent)}
 kbd{font:inherit;font-size:12px;background:var(--line);padding:1px 6px;border-radius:5px}
 footer{max-width:960px;margin:0 auto;padding:0 16px 30px;color:var(--muted);font-size:12px}
 </style>
@@ -93,6 +95,12 @@ footer{max-width:960px;margin:0 auto;padding:0 16px 30px;color:var(--muted);font
   const $ = s => document.querySelector(s);
   if(!D){ $("#contenuto").innerHTML = '<div class="card">Dati mancanti: esegui <code>python3 strumenti/genera_sito.py</code>.</div>'; return; }
 
+  // Rilancio del consiglio: la routine su claude.ai (solo account di Armando)
+  // e, se attivo, l'avvio da GitHub con l'etichetta "formazione" (solo collaboratori del repository).
+  const RILANCIO = {
+    claude: "https://claude.ai/code/routines/trig_01BY6vL6UKaEC2uaBfe6qkfV",
+    github: null
+  };
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   const NOI = D.calendario.nostra_squadra;
   const RUOLI = {P:"Portieri", D:"Difensori", C:"Centrocampisti", A:"Attaccanti"};
@@ -155,6 +163,16 @@ footer{max-width:960px;margin:0 auto;padding:0 16px 30px;color:var(--muted);font
   const formazioni = D.storico.filter(f => f.tipo === "formazione");
   const consiglioPer = sa => formazioni.filter(f => numeroG(f.nome) === sa && !f.prova).pop();
 
+  // ---- pulsanti di rilancio
+  function pulsantiRilancio(){
+    const b = [];
+    if(RILANCIO.github) b.push(`<a class="btn" href="${esc(RILANCIO.github)}" target="_blank" rel="noopener">Rilancia da GitHub</a>`);
+    if(RILANCIO.claude) b.push(`<a class="btn ghost" href="${esc(RILANCIO.claude)}" target="_blank" rel="noopener">Rilancia su claude.ai</a>`);
+    if(!b.length) return "";
+    return `<div class="row" style="margin-top:10px">${b.join("")}</div>
+      <p class="small muted">Rifà subito il consiglio con Opus (una decina di minuti). ${RILANCIO.github ? "Da GitHub serve essere collaboratori del repository; " : ""}su claude.ai serve l'account di Armando: premi "Esegui ora".</p>`;
+  }
+
   // ---- viste
   function panoramica(){
     let h = '<div class="grid">';
@@ -165,6 +183,7 @@ footer{max-width:960px;margin:0 auto;padding:0 16px 30px;color:var(--muted);font
         <div class="muted">${prossima.lega}ª giornata di lega · ${prossima.serie_a}ª di Serie A · ${n.casa ? "in casa" : "fuori casa"}</div>
         ${c ? `<p class="small">Consiglio pronto: <a href="#consiglio" data-file="${esc(c.nome)}">${esc(c.nome)}</a></p>`
             : `<div class="alert">Termine: <strong>5 minuti prima della prima partita</strong> della ${prossima.serie_a}ª giornata di Serie A. Giorno e ora non ancora calcolati: serve <kbd>/formazione</kbd>.</div>`}
+        ${pulsantiRilancio()}
       </div>`;
     }
     if(inCorso){
@@ -200,6 +219,7 @@ footer{max-width:960px;margin:0 auto;padding:0 16px 30px;color:var(--muted);font
       || lista.find(f => f.tipo === "formazione") || lista[0];
     let h = `<div class="row" style="margin-bottom:10px"><select id="sel-file">${lista.map(f =>
       `<option value="${esc(f.nome)}"${f === attivo ? " selected" : ""}>${esc(f.nome)}${f.prova ? " (prova)" : ""}</option>`).join("")}</select></div>`;
+    h += pulsantiRilancio();
     if(attivo.prova) h += '<div class="alert" style="margin:0 0 10px">File di prova: non è un consiglio reale.</div>';
     return h + `<div class="card md">${md(attivo.testo)}</div>`;
   }
