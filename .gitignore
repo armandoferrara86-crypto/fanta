@@ -1,0 +1,4 @@
+.DS_Store
+in/*
+!in/.gitkeep
+__pycache__/

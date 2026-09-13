@@ -1,0 +1,88 @@
+{
+  "_fonte": "Opzioni di Lega su leghe.fantacalcio.it/san-lorenzo-26-27/settings, lette il 13/09/2026 tra le 16:55 e le 17:05. Solo l'admin puo' modificarle: se cambiano, rileggile dal sito.",
+
+  "nome_lega": "San Lorenzo 26 27",
+  "url_lega": "https://leghe.fantacalcio.it/san-lorenzo-26-27",
+  "piattaforma": "Leghe Fantacalcio.it",
+  "formato": "Classic",
+  "competizione": "calendario a scontri diretti, 35 giornate (vedi config/calendario-lega.json)",
+  "stagione": "2026-27",
+
+  "partecipanti": 8,
+  "budget": 500,
+  "slot_per_ruolo": { "P": 3, "D": 8, "C": 8, "A": 6 },
+  "panchina": "libera, 14 giocatori",
+  "rose_visibili": true,
+  "under_obbligatori": false,
+
+  "termine_schieramento": "5 minuti prima del calcio d'inizio della prima partita della giornata",
+  "_nota_termine": "Opzione 'Timeout inserimento formazione' = 5 minuti. Confermato da Armando il 13/09/2026: il blocco scatta 5 minuti prima della PRIMA partita della giornata di Serie A, per tutta la formazione.",
+  "formazioni_nascoste": true,
+  "formazione_non_schierata": "recupera formazione precedente",
+
+  "moduli_ammessi": ["3-4-3", "3-5-2", "4-3-3", "4-4-2", "4-5-1", "5-3-2", "5-4-1"],
+
+  "sostituzioni_automatiche": 5,
+  "tipo_sostituzioni": "Traditional",
+  "_nota_sostituzioni": "Traditional: i cambi avvengono solo tra pari ruolo, mai cambio modulo. Riserva d'ufficio disattivata.",
+  "switch": "Plus",
+  "_nota_switch": "Consente di scambiare un titolare con la riserva indicata se non scende in campo dal primo minuto. PLUS: la riserva indicata puo' essere di ruolo diverso, con eventuale cambio di modulo.",
+
+  "modificatore_difesa": true,
+  "modificatore_difesa_dettaglio": {
+    "includi_portiere": true,
+    "applicazione": "propria squadra",
+    "tabella_media_voto": [
+      { "da": null, "a": 6, "bonus": 0 },
+      { "da": 6, "a": 6.25, "bonus": 1 },
+      { "da": 6.25, "a": 6.5, "bonus": 2 },
+      { "da": 6.5, "a": 6.75, "bonus": 3 },
+      { "da": 6.75, "a": 7, "bonus": 4.5 },
+      { "da": 7, "a": null, "bonus": 6 }
+    ]
+  },
+  "_nota_modificatori": "Testo del sito: si applica schierando almeno 4 difensori; calcolo sul voto senza bonus/malus; con 'includi portiere' la media e' su portiere + 3 migliori difensori. Non si applica se in campo non ci sono almeno 4 voti validi di difensori (piu' il portiere); se dopo le sostituzioni restano 3 difensori non si applica; i 6 politici valgono come voti validi, le riserve d'ufficio in difesa no. 'da' incluso, 'a' escluso.",
+  "modificatore_portiere": false,
+  "modificatore_centrocampo": false,
+  "modificatore_attacco": false,
+  "modificatore_modulo": false,
+  "fattore_rendimento": false,
+  "fattore_fairplay": false,
+  "fattore_capitano": false,
+
+  "punteggi": {
+    "gol_segnato": 3,
+    "gol_subito": -1,
+    "rigore_segnato": 3,
+    "rigore_sbagliato": -3,
+    "rigore_parato": 3,
+    "assist": 1,
+    "assist_gold": 1,
+    "assist_soft": 0,
+    "player_of_the_match": 1,
+    "ammonizione": -0.5,
+    "espulsione": -1,
+    "autogol": -2,
+    "porta_inviolata_portiere": 1,
+    "gol_vittoria": 0,
+    "gol_pareggio": 0
+  },
+  "differenzia_punteggi_per_ruolo": false,
+  "fonte_voti": "Fantacalcio",
+  "ammonito_senza_voto": "non sostituito, fantavoto 5.5",
+
+  "soglie_gol": {
+    "primo_gol": 66,
+    "passo": 5,
+    "_nota": "66 = 1 gol, 71 = 2, 76 = 3, 81 = 4, 86 = 5, ... poi un gol ogni 5 punti in piu'."
+  },
+  "limita_vittoria": false,
+  "limita_pareggio": false,
+  "autogol_squadra": false,
+
+  "preferenze": {
+    "modulo_preferito": "4-3-3",
+    "avvisa_diffidati": true,
+    "avvisa_doppi_impegni": true
+  }
+}

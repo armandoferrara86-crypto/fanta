@@ -1,0 +1,80 @@
+{
+  "lega": "San Lorenzo 26 27",
+  "competizione": "San Lorenzo 26/27 (id 25843), calendario a scontri diretti",
+  "fonte": "leghe.fantacalcio.it/san-lorenzo-26-27/view/competition/25843/fixtures — letto il 13/09/2026 intorno alle 17:10",
+  "_note": "Ogni partita e' [prima squadra, seconda squadra] nell'ordine mostrato dal sito. serie_a = giornata di Serie A su cui si gioca la giornata di lega: verificato su tutte le 35 giornate, e' sempre lega + 2. Giorno e ora delle partite di Serie A NON sono qui: vanno letti sul web a ogni giro. Aggiornato solo il risultato della 1a giornata; la 2a era in corso alla lettura.",
+  "nostra_squadra": "FC Tremoooooon",
+  "giornate": [
+    {"lega": 1, "serie_a": 3, "partite": [
+      ["Red Bull Salisburro", "Berlusca Dortmund"], ["FC Tremoooooon", "I LEONI DI JEP"], ["BEVERLY INPS 1926", "Azzurrissimo"], ["FC IAMO CALCIO", "The Tabacchins"]],
+      "risultati": ["1-1 (70-66)", "1-4 (68-81)", "2-1 (72-67.5)", "3-3 (79-77.5)"]},
+    {"lega": 2, "serie_a": 4, "stato": "in corso al 13/09/2026 17:04", "partite": [
+      ["Berlusca Dortmund", "FC IAMO CALCIO"], ["The Tabacchins", "BEVERLY INPS 1926"], ["Azzurrissimo", "FC Tremoooooon"], ["I LEONI DI JEP", "Red Bull Salisburro"]]},
+    {"lega": 3, "serie_a": 5, "partite": [
+      ["FC Tremoooooon", "The Tabacchins"], ["BEVERLY INPS 1926", "Berlusca Dortmund"], ["FC IAMO CALCIO", "Red Bull Salisburro"], ["Azzurrissimo", "I LEONI DI JEP"]]},
+    {"lega": 4, "serie_a": 6, "partite": [
+      ["Red Bull Salisburro", "BEVERLY INPS 1926"], ["Berlusca Dortmund", "FC Tremoooooon"], ["The Tabacchins", "Azzurrissimo"], ["I LEONI DI JEP", "FC IAMO CALCIO"]]},
+    {"lega": 5, "serie_a": 7, "partite": [
+      ["FC Tremoooooon", "Red Bull Salisburro"], ["BEVERLY INPS 1926", "FC IAMO CALCIO"], ["The Tabacchins", "I LEONI DI JEP"], ["Azzurrissimo", "Berlusca Dortmund"]]},
+    {"lega": 6, "serie_a": 8, "partite": [
+      ["Red Bull Salisburro", "Azzurrissimo"], ["Berlusca Dortmund", "The Tabacchins"], ["BEVERLY INPS 1926", "I LEONI DI JEP"], ["FC IAMO CALCIO", "FC Tremoooooon"]]},
+    {"lega": 7, "serie_a": 9, "partite": [
+      ["FC Tremoooooon", "BEVERLY INPS 1926"], ["The Tabacchins", "Red Bull Salisburro"], ["Azzurrissimo", "FC IAMO CALCIO"], ["I LEONI DI JEP", "Berlusca Dortmund"]]},
+    {"lega": 8, "serie_a": 10, "partite": [
+      ["Berlusca Dortmund", "Red Bull Salisburro"], ["I LEONI DI JEP", "FC Tremoooooon"], ["Azzurrissimo", "BEVERLY INPS 1926"], ["The Tabacchins", "FC IAMO CALCIO"]]},
+    {"lega": 9, "serie_a": 11, "partite": [
+      ["FC IAMO CALCIO", "Berlusca Dortmund"], ["BEVERLY INPS 1926", "The Tabacchins"], ["FC Tremoooooon", "Azzurrissimo"], ["Red Bull Salisburro", "I LEONI DI JEP"]]},
+    {"lega": 10, "serie_a": 12, "partite": [
+      ["The Tabacchins", "FC Tremoooooon"], ["Berlusca Dortmund", "BEVERLY INPS 1926"], ["Red Bull Salisburro", "FC IAMO CALCIO"], ["I LEONI DI JEP", "Azzurrissimo"]]},
+    {"lega": 11, "serie_a": 13, "partite": [
+      ["BEVERLY INPS 1926", "Red Bull Salisburro"], ["FC Tremoooooon", "Berlusca Dortmund"], ["Azzurrissimo", "The Tabacchins"], ["FC IAMO CALCIO", "I LEONI DI JEP"]]},
+    {"lega": 12, "serie_a": 14, "partite": [
+      ["Red Bull Salisburro", "FC Tremoooooon"], ["FC IAMO CALCIO", "BEVERLY INPS 1926"], ["I LEONI DI JEP", "The Tabacchins"], ["Berlusca Dortmund", "Azzurrissimo"]]},
+    {"lega": 13, "serie_a": 15, "partite": [
+      ["Azzurrissimo", "Red Bull Salisburro"], ["The Tabacchins", "Berlusca Dortmund"], ["I LEONI DI JEP", "BEVERLY INPS 1926"], ["FC Tremoooooon", "FC IAMO CALCIO"]]},
+    {"lega": 14, "serie_a": 16, "partite": [
+      ["BEVERLY INPS 1926", "FC Tremoooooon"], ["Red Bull Salisburro", "The Tabacchins"], ["FC IAMO CALCIO", "Azzurrissimo"], ["Berlusca Dortmund", "I LEONI DI JEP"]]},
+    {"lega": 15, "serie_a": 17, "partite": [
+      ["Red Bull Salisburro", "Berlusca Dortmund"], ["FC Tremoooooon", "I LEONI DI JEP"], ["BEVERLY INPS 1926", "Azzurrissimo"], ["FC IAMO CALCIO", "The Tabacchins"]]},
+    {"lega": 16, "serie_a": 18, "partite": [
+      ["Berlusca Dortmund", "FC IAMO CALCIO"], ["The Tabacchins", "BEVERLY INPS 1926"], ["Azzurrissimo", "FC Tremoooooon"], ["I LEONI DI JEP", "Red Bull Salisburro"]]},
+    {"lega": 17, "serie_a": 19, "partite": [
+      ["FC Tremoooooon", "The Tabacchins"], ["BEVERLY INPS 1926", "Berlusca Dortmund"], ["FC IAMO CALCIO", "Red Bull Salisburro"], ["Azzurrissimo", "I LEONI DI JEP"]]},
+    {"lega": 18, "serie_a": 20, "partite": [
+      ["Red Bull Salisburro", "BEVERLY INPS 1926"], ["Berlusca Dortmund", "FC Tremoooooon"], ["The Tabacchins", "Azzurrissimo"], ["I LEONI DI JEP", "FC IAMO CALCIO"]]},
+    {"lega": 19, "serie_a": 21, "partite": [
+      ["FC Tremoooooon", "Red Bull Salisburro"], ["BEVERLY INPS 1926", "FC IAMO CALCIO"], ["The Tabacchins", "I LEONI DI JEP"], ["Azzurrissimo", "Berlusca Dortmund"]]},
+    {"lega": 20, "serie_a": 22, "partite": [
+      ["Red Bull Salisburro", "Azzurrissimo"], ["Berlusca Dortmund", "The Tabacchins"], ["BEVERLY INPS 1926", "I LEONI DI JEP"], ["FC IAMO CALCIO", "FC Tremoooooon"]]},
+    {"lega": 21, "serie_a": 23, "partite": [
+      ["FC Tremoooooon", "BEVERLY INPS 1926"], ["The Tabacchins", "Red Bull Salisburro"], ["Azzurrissimo", "FC IAMO CALCIO"], ["I LEONI DI JEP", "Berlusca Dortmund"]]},
+    {"lega": 22, "serie_a": 24, "partite": [
+      ["Berlusca Dortmund", "Red Bull Salisburro"], ["I LEONI DI JEP", "FC Tremoooooon"], ["Azzurrissimo", "BEVERLY INPS 1926"], ["The Tabacchins", "FC IAMO CALCIO"]]},
+    {"lega": 23, "serie_a": 25, "partite": [
+      ["FC IAMO CALCIO", "Berlusca Dortmund"], ["BEVERLY INPS 1926", "The Tabacchins"], ["FC Tremoooooon", "Azzurrissimo"], ["Red Bull Salisburro", "I LEONI DI JEP"]]},
+    {"lega": 24, "serie_a": 26, "partite": [
+      ["The Tabacchins", "FC Tremoooooon"], ["Berlusca Dortmund", "BEVERLY INPS 1926"], ["Red Bull Salisburro", "FC IAMO CALCIO"], ["I LEONI DI JEP", "Azzurrissimo"]]},
+    {"lega": 25, "serie_a": 27, "partite": [
+      ["BEVERLY INPS 1926", "Red Bull Salisburro"], ["FC Tremoooooon", "Berlusca Dortmund"], ["Azzurrissimo", "The Tabacchins"], ["FC IAMO CALCIO", "I LEONI DI JEP"]]},
+    {"lega": 26, "serie_a": 28, "partite": [
+      ["Red Bull Salisburro", "FC Tremoooooon"], ["FC IAMO CALCIO", "BEVERLY INPS 1926"], ["I LEONI DI JEP", "The Tabacchins"], ["Berlusca Dortmund", "Azzurrissimo"]]},
+    {"lega": 27, "serie_a": 29, "partite": [
+      ["Azzurrissimo", "Red Bull Salisburro"], ["The Tabacchins", "Berlusca Dortmund"], ["I LEONI DI JEP", "BEVERLY INPS 1926"], ["FC Tremoooooon", "FC IAMO CALCIO"]]},
+    {"lega": 28, "serie_a": 30, "partite": [
+      ["BEVERLY INPS 1926", "FC Tremoooooon"], ["Red Bull Salisburro", "The Tabacchins"], ["FC IAMO CALCIO", "Azzurrissimo"], ["Berlusca Dortmund", "I LEONI DI JEP"]]},
+    {"lega": 29, "serie_a": 31, "partite": [
+      ["Red Bull Salisburro", "Berlusca Dortmund"], ["FC Tremoooooon", "I LEONI DI JEP"], ["BEVERLY INPS 1926", "Azzurrissimo"], ["FC IAMO CALCIO", "The Tabacchins"]]},
+    {"lega": 30, "serie_a": 32, "partite": [
+      ["Berlusca Dortmund", "FC IAMO CALCIO"], ["The Tabacchins", "BEVERLY INPS 1926"], ["Azzurrissimo", "FC Tremoooooon"], ["I LEONI DI JEP", "Red Bull Salisburro"]]},
+    {"lega": 31, "serie_a": 33, "partite": [
+      ["FC Tremoooooon", "The Tabacchins"], ["BEVERLY INPS 1926", "Berlusca Dortmund"], ["FC IAMO CALCIO", "Red Bull Salisburro"], ["Azzurrissimo", "I LEONI DI JEP"]]},
+    {"lega": 32, "serie_a": 34, "partite": [
+      ["Red Bull Salisburro", "BEVERLY INPS 1926"], ["Berlusca Dortmund", "FC Tremoooooon"], ["The Tabacchins", "Azzurrissimo"], ["I LEONI DI JEP", "FC IAMO CALCIO"]]},
+    {"lega": 33, "serie_a": 35, "partite": [
+      ["FC Tremoooooon", "Red Bull Salisburro"], ["BEVERLY INPS 1926", "FC IAMO CALCIO"], ["The Tabacchins", "I LEONI DI JEP"], ["Azzurrissimo", "Berlusca Dortmund"]]},
+    {"lega": 34, "serie_a": 36, "partite": [
+      ["Red Bull Salisburro", "Azzurrissimo"], ["Berlusca Dortmund", "The Tabacchins"], ["BEVERLY INPS 1926", "I LEONI DI JEP"], ["FC IAMO CALCIO", "FC Tremoooooon"]]},
+    {"lega": 35, "serie_a": 37, "partite": [
+      ["FC Tremoooooon", "BEVERLY INPS 1926"], ["The Tabacchins", "Red Bull Salisburro"], ["Azzurrissimo", "FC IAMO CALCIO"], ["I LEONI DI JEP", "Berlusca Dortmund"]]}
+  ]
+}
