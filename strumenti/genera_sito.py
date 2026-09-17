@@ -22,7 +22,7 @@ def leggi_json(percorso):
 
 
 def tipo_file(nome):
-    for tipo in ("formazione", "notizie", "bilancio"):
+    for tipo in ("formazione", "notizie", "statistiche", "bilancio"):
         if tipo in nome:
             return tipo
     return "altro"

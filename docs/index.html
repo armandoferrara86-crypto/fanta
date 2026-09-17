@@ -99,7 +99,7 @@ footer{max-width:960px;margin:0 auto;padding:0 16px 30px;color:var(--muted);font
   // e, se attivo, l'avvio da GitHub con l'etichetta "formazione" (solo collaboratori del repository).
   const RILANCIO = {
     claude: "https://claude.ai/code/routines/trig_01BY6vL6UKaEC2uaBfe6qkfV",
-    github: null
+    github: "https://github.com/armandoferrara86-crypto/fanta/actions/workflows/rilancia.yml"
   };
   const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   const NOI = D.calendario.nostra_squadra;
@@ -170,7 +170,7 @@ footer{max-width:960px;margin:0 auto;padding:0 16px 30px;color:var(--muted);font
     if(RILANCIO.claude) b.push(`<a class="btn ghost" href="${esc(RILANCIO.claude)}" target="_blank" rel="noopener">Rilancia su claude.ai</a>`);
     if(!b.length) return "";
     return `<div class="row" style="margin-top:10px">${b.join("")}</div>
-      <p class="small muted">Rifà subito il consiglio (una decina di minuti). ${RILANCIO.github ? "Da GitHub serve essere collaboratori del repository; " : ""}su claude.ai serve l'account di Armando: premi "Esegui ora".</p>`;
+      <p class="small muted">Rifà subito il consiglio (circa 15 minuti), poi la pagina si aggiorna da sola. ${RILANCIO.github ? "Da GitHub: accedi, premi <strong>Run workflow</strong> e conferma (serve essere collaboratori del repository). " : ""}Su claude.ai serve l'account di Armando: premi "Esegui ora".</p>`;
   }
 
   // ---- viste

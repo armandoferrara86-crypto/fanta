@@ -1,5 +1,5 @@
 window.DATI = {
- "generato": "13/09/2026 21:55",
+ "generato": "13/09/2026 22:03",
  "lega": {
   "_fonte": "Opzioni di Lega su leghe.fantacalcio.it/san-lorenzo-26-27/settings, lette il 13/09/2026 tra le 16:55 e le 17:05. Solo l'admin puo' modificarle: se cambiano, rileggile dal sito.",
   "nome_lega": "San Lorenzo 26 27",
@@ -279,7 +279,8 @@ window.DATI = {
     "fm_scorsa": null,
     "presenze_scorsa": null,
     "rigorista": null,
-    "stato": "in rosa"
+    "stato": "in rosa",
+    "nota": "Ruolo D confermato da Armando il 13/09/2026 (anche sul sito della lega e' tra i difensori). Una notizia letta dalla routine del 13/09 lo indicava come secondo portiere della Fiorentina: probabile confusione con un omonimo, non cambiare ruolo."
    },
    {
     "nome": "McTominay",

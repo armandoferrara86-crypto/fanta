@@ -1,0 +1,76 @@
+name: Rilancia formazione
+
+# Avvio solo a mano: Actions -> "Rilancia formazione" -> Run workflow.
+# Lo possono avviare solo gli utenti con permesso di scrittura sul repository.
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: rilancia-formazione
+  cancel-in-progress: false
+
+jobs:
+  formazione:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    env:
+      TZ: Europe/Rome
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Consiglio di formazione
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          claude_args: |
+            --model claude-sonnet-5
+            --allowedTools "Read,Write,Edit,Glob,Grep,WebSearch,WebFetch,Agent,Task,Bash(date:*)"
+          prompt: |
+            Sei il rilancio manuale del consiglio di formazione di fantacalcio per la squadra
+            FC Tremoooooon (lega "San Lorenzo 26 27" su Leghe Fantacalcio), di Armando e Mirko.
+            Il repository è già nella cartella di lavoro. Il fuso orario è già Europe/Rome:
+            per l'ora usa `date`.
+
+            Prima di tutto leggi CLAUDE.md e rispettane tutte le regole: mai lo stato di un
+            giocatore a memoria, fonte e ora di lettura per ogni dato, ballottaggi sempre elencati.
+
+            Limiti: non hai accesso a leghe.fantacalcio.it (serve login), usa solo siti pubblici.
+            Non inserire la formazione da nessuna parte. Non modificare rosa.json, i file in config/
+            né in/. Non fare commit né push: dopo di te il workflow rigenera la pagina e pubblica.
+
+            Consumi: sii efficiente, non più di 3 ricerche in parallelo, raggruppa per squadra.
+
+            1. Cerca sul web la prossima giornata di Serie A la cui PRIMA partita non è ancora
+               iniziata (NN), con giorno e ora da una fonte affidabile, annotando fonte e ora.
+            2. Termine = calcio d'inizio della prima partita meno 5 minuti; calcola le ore mancanti H.
+               Se H < 0,25 scrivi in storico/2026-27/ un breve file gNN-formazione (con suffisso
+               -2, -3 … se esiste già) che dice che la formazione è ormai bloccata, e fermati.
+            3. In config/calendario-lega.json trova la giornata di lega con "serie_a" = NN e
+               l'avversario di FC Tremoooooon.
+            4. Esegui le istruzioni di .claude/commands/formazione.md con la giornata NN al posto
+               di $1, passi 1-4 (subagent ricognitore, statistico e allenatore in .claude/agents/),
+               SALTANDO il passo 5. Salva in storico/2026-27/ senza sovrascrivere nulla (suffisso
+               -2, -3 … se il file esiste). Nella testata scrivi anche giornata di lega e avversario.
+               Se H > 48, scrivi in cima che il consiglio è provvisorio e va rifatto.
+
+      - name: Aggiorna la pagina e pubblica
+        run: |
+          python3 strumenti/genera_sito.py
+          git config user.name "claude[bot]"
+          git config user.email "claude[bot]@users.noreply.github.com"
+          git add storico docs
+          if git diff --cached --quiet; then
+            echo "Nessun file nuovo da pubblicare."
+            exit 0
+          fi
+          git commit -m "Rilancio da GitHub: consiglio di formazione"
+          git push
+          gh api -X POST "repos/${{ github.repository }}/pages/builds" || echo "Richiesta di build Pages non riuscita: si aggiornerà al prossimo push."
+        env:
+          GH_TOKEN: ${{ github.token }}

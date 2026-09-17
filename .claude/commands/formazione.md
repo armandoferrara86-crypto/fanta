@@ -33,10 +33,17 @@ l'ora di lettura.
 
 Salva quello che torna in `storico/2026-27/gNN-notizie.md`.
 
+Nello stesso momento (in parallelo al ricognitore) lancia il subagent
+`statistico` con lo stesso elenco di giocatori, nome, squadra e ruolo: raccoglie i
+numeri della stagione in corso (presenze, MV, FM, gol, assist, cartellini, rigori)
+con fonte e ora. Salva quello che torna in `storico/2026-27/gNN-statistiche.md`.
+Se esiste già un file statistiche per questa giornata scritto dopo l'ultima
+giornata giocata, riusalo invece di rilanciare lo statistico.
+
 ## 3. Scegli
 
-Lancia il subagent `allenatore` passandogli il percorso del file notizie
-appena scritto, `rosa.json` e `config/lega.json`.
+Lancia il subagent `allenatore` passandogli i percorsi del file notizie e del
+file statistiche appena scritti, `rosa.json` e `config/lega.json`.
 
 ## 4. Scrivi il consiglio
 
