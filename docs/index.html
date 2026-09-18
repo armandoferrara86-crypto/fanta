@@ -160,8 +160,15 @@ footer{max-width:960px;margin:0 auto;padding:0 16px 30px;color:var(--muted);font
 
   // ---- storico: file per giornata di Serie A (gNN)
   const numeroG = nome => { const m = nome.match(/^g(\d+)/i); return m ? +m[1] : null; };
+  // "gNN-formazione.md" (senza suffisso) è il PRIMO giro, non l'ultimo: l'ordine
+  // alfabetico lo metterebbe dopo "-2"/"-3" (il punto viene dopo il trattino),
+  // quindi va confrontato per numero di suffisso, non per stringa.
+  const numeroSuffisso = nome => { const m = nome.match(/-(\d+)\.md$/i); return m ? +m[1] : 1; };
   const formazioni = D.storico.filter(f => f.tipo === "formazione");
-  const consiglioPer = sa => formazioni.filter(f => numeroG(f.nome) === sa && !f.prova).pop();
+  const ultimaPer = lista => lista.length
+    ? lista.reduce((a, b) => numeroSuffisso(b.nome) > numeroSuffisso(a.nome) ? b : a)
+    : undefined;
+  const consiglioPer = sa => ultimaPer(formazioni.filter(f => numeroG(f.nome) === sa && !f.prova));
 
   // ---- pulsanti di rilancio
   function pulsantiRilancio(){
@@ -215,7 +222,10 @@ footer{max-width:960px;margin:0 auto;padding:0 16px 30px;color:var(--muted);font
   function consiglio(scelto){
     if(!D.storico.length) return '<div class="card">Nessun file in <code>storico/</code>. Lancia <kbd>/formazione</kbd>.</div>';
     const lista = [...D.storico].reverse();
-    const attivo = lista.find(f => f.nome === scelto) || lista.find(f => f.tipo === "formazione" && !f.prova)
+    const ultimaGiornata = Math.max(...formazioni.map(f => numeroG(f.nome) ?? -1));
+    const attivo = lista.find(f => f.nome === scelto)
+      || ultimaPer(formazioni.filter(f => numeroG(f.nome) === ultimaGiornata && !f.prova))
+      || ultimaPer(formazioni.filter(f => !f.prova))
       || lista.find(f => f.tipo === "formazione") || lista[0];
     let h = `<div class="row" style="margin-bottom:10px"><select id="sel-file">${lista.map(f =>
       `<option value="${esc(f.nome)}"${f === attivo ? " selected" : ""}>${esc(f.nome)}${f.prova ? " (prova)" : ""}</option>`).join("")}</select></div>`;
