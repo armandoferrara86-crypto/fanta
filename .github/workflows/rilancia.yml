@@ -4,6 +4,15 @@ name: Rilancia formazione
 # Lo possono avviare solo gli utenti con permesso di scrittura sul repository.
 on:
   workflow_dispatch:
+    inputs:
+      modello:
+        description: "Modello Claude per questo giro (Opus ragiona meglio sui casi ambigui, ma è più lento e consuma di più)"
+        required: false
+        type: choice
+        options:
+          - claude-sonnet-5
+          - claude-opus-5
+        default: claude-sonnet-5
 
 concurrency:
   group: rilancia-formazione
@@ -29,7 +38,7 @@ jobs:
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           claude_args: |
-            --model claude-sonnet-5
+            --model ${{ inputs.modello || 'claude-sonnet-5' }}
             --allowedTools "Read,Write,Edit,Glob,Grep,WebSearch,WebFetch,Agent,Task,Bash(date:*)"
           prompt: |
             Sei il rilancio manuale del consiglio di formazione di fantacalcio per la squadra
@@ -45,6 +54,12 @@ jobs:
             né in/. Non fare commit né push: dopo di te il workflow rigenera la pagina e pubblica.
 
             Consumi: sii efficiente, non più di 3 ricerche in parallelo, raggruppa per squadra.
+
+            Modello richiesto per questo giro: ${{ inputs.modello || 'claude-sonnet-5' }}. Quando lanci i
+            subagent ricognitore, statistico e allenatore, passa esplicitamente questo stesso modello
+            (parametro "model" dello strumento Agent/Task) invece di lasciare quello di default scritto
+            nei loro file .claude/agents/*.md: se qui è stato scelto Opus, deve valere anche per loro,
+            non solo per te.
 
             1. Cerca sul web la prossima giornata di Serie A la cui PRIMA partita non è ancora
                iniziata (NN), con giorno e ora da una fonte affidabile, annotando fonte e ora.

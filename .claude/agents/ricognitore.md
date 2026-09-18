@@ -26,12 +26,22 @@ Una riga per giocatore, in questa forma:
 ```
 NOME (SQUADRA) — avversario, casa/trasferta
   impiego:    titolare | ballottaggio con X | panchina | fuori lista | non confermato
+  certezza:   ufficiale (comunicato/conferenza stampa della squadra) | probabile (previsione di giornalisti) | non confermato
   condizione: disponibile | in dubbio (motivo) | infortunato (rientro previsto) | non confermato
   disciplina: nulla | diffidato | squalificato (N giornate)
   rigori:     rigorista | seconda scelta | no | non confermato
   fonte:      [nome sito] — letto il GG/MM alle HH:MM
   nota:       una riga solo se c'è qualcosa che conta davvero
 ```
+
+La riga `certezza` non è un dettaglio formale: una "probabile formazione" è una
+previsione di un giornalista fatta prima che l'allenatore parli, non un fatto.
+Anche quando più fonti concordano, resta una previsione finché non arriva un
+comunicato ufficiale, una conferenza stampa o la lista dei convocati — e le
+previsioni, anche concordi, a volte sbagliano. Scrivi `ufficiale` solo se la
+fonte è la squadra stessa (sito del club, account ufficiale, dichiarazione
+diretta dell'allenatore); altrimenti è sempre `probabile`, non importa quante
+fonti indipendenti dicano la stessa cosa.
 
 Alla fine, tre righe di riepilogo:
 - **Fuori causa**: chi non è schierabile (infortunati e squalificati)

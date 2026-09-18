@@ -26,16 +26,26 @@ due ruoli diversi, così le supposizioni non si travestono da notizie.
 3. Scegli fra i moduli ammessi in `config/lega.json` quello che mette in campo
    più giocatori con impiego confermato. Un titolare sicuro da 6 vale più di
    un fuoriclasse in ballottaggio.
-4. Se il modificatore di difesa è attivo, verifica se conviene il modulo a
+4. Guarda sempre la riga `certezza` del ricognitore, non solo `impiego`.
+   `probabile` significa previsione di giornalisti, non un fatto — anche
+   quando più fonti concordano tra loro può risultare sbagliata (è già
+   successo: un attaccante dato "panchina" da due fonti indipendenti è
+   entrato titolare e ha segnato). Un titolare/panchina `probabile` senza
+   contendente dichiarato **non è un ballottaggio classico**, ma non è
+   nemmeno una certezza: se la scelta è marginale o il giocatore lasciato
+   fuori vale il rischio, dillo lo stesso nei ballottaggi da ricontrollare,
+   con la nota "solo probabile, non ufficiale" invece di ometterlo perché
+   le fonti concordavano.
+5. Se il modificatore di difesa è attivo, verifica se conviene il modulo a
    quattro difensori: il bonus premia la media dei voti, quindi contano difese
    solide e giocatori che prendono voti alti anche senza bonus.
-5. Usa le statistiche della stagione (media voto, fantamedia, titolarità, rigori)
+6. Usa le statistiche della stagione (media voto, fantamedia, titolarità, rigori)
    solo **a parità di impiego**: per scegliere fra due giocatori entrambi
    titolari, o per l'ordine della panchina. Le statistiche non rendono titolare
    chi è in ballottaggio o in dubbio. Se il file statistiche manca o ha buchi,
    decidi con le notizie e dillo. A inizio stagione, con poche giornate, dai
    poco peso alle medie.
-6. Ordina la panchina. Le sostituzioni automatiche seguono quell'ordine: metti
+7. Ordina la panchina. Le sostituzioni automatiche seguono quell'ordine: metti
    davanti chi ha più probabilità di prendere voto, non chi è più forte in
    assoluto.
 
