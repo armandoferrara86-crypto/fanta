@@ -1,5 +1,5 @@
 window.DATI = {
- "generato": "18/09/2026 19:06",
+ "generato": "10/10/2026 09:00",
  "lega": {
   "_fonte": "Opzioni di Lega su leghe.fantacalcio.it/san-lorenzo-26-27/settings, lette il 13/09/2026 tra le 16:55 e le 17:05. Solo l'admin puo' modificarle: se cambiano, rileggile dal sito.",
   "nome_lega": "San Lorenzo 26 27",
