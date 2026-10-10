@@ -1,10 +1,10 @@
 {
   "stagione": "2026-27",
-  "aggiornato": "13/09/2026",
+  "aggiornato": "10/10/2026",
   "squadra_fanta": "FC Tremoooooon",
   "allenatori": "Armando e Mirko (gestione condivisa)",
   "fonte": "in/PHOTO-2026-09-04-23-02-42.jpg (riepilogo rose post-asta fatto da un compagno di lega, 04/09/2026). Nessun export della console d'asta.",
-  "_note": "quotazione, fm_scorsa, presenze_scorsa e rigorista non presenti nella fonte: lasciati null, non stimati. mv_foto/fm_foto e fvm sono i valori come appaiono nella foto del 04/09/2026. Rosa confermata da Armando il 13/09/2026.",
+  "_note": "quotazione, fm_scorsa, presenze_scorsa e rigorista non presenti nella fonte: lasciati null, non stimati. mv_foto/fm_foto e fvm sono i valori come appaiono nella foto del 04/09/2026. Rosa confermata da Armando il 13/09/2026. Il 10/10/2026 Armando ha comunicato lo scambio: via Maignan, Rrahmani, McTominay; dentro Skorupski, Kristensen T., Nico Paz. crediti_spesi/crediti_residui NON aggiornati (importi dello scambio non noti).",
   "crediti_spesi": 484,
   "crediti_residui": 16,
   "giocatori": [
@@ -23,20 +23,6 @@
       "stato": "in rosa"
     },
     {
-      "nome": "Maignan",
-      "squadra": "Milan",
-      "ruolo": "P",
-      "pagato": 30,
-      "quotazione": null,
-      "fvm": 26,
-      "mv_foto": 6.0,
-      "fm_foto": 5.5,
-      "fm_scorsa": null,
-      "presenze_scorsa": null,
-      "rigorista": null,
-      "stato": "in rosa"
-    },
-    {
       "nome": "Torriani",
       "squadra": "Milan",
       "ruolo": "P",
@@ -49,6 +35,21 @@
       "presenze_scorsa": null,
       "rigorista": null,
       "stato": "in rosa"
+    },
+    {
+      "nome": "Skorupski",
+      "squadra": "Bologna",
+      "ruolo": "P",
+      "pagato": null,
+      "quotazione": null,
+      "fvm": null,
+      "mv_foto": null,
+      "fm_foto": null,
+      "fm_scorsa": null,
+      "presenze_scorsa": null,
+      "rigorista": null,
+      "stato": "in rosa",
+      "nota": "Scambio del mercato di riparazione comunicato da Armando il 10/10/2026 (in entrata al posto di Maignan, Rrahmani, McTominay). Squadra e ruolo: Sky TG24 listone 2026-27 (letto 10/10/2026)."
     },
     {
       "nome": "Dimarco",
@@ -88,20 +89,6 @@
       "fvm": 13,
       "mv_foto": 5.75,
       "fm_foto": 5.5,
-      "fm_scorsa": null,
-      "presenze_scorsa": null,
-      "rigorista": null,
-      "stato": "in rosa"
-    },
-    {
-      "nome": "Rrahmani",
-      "squadra": "Napoli",
-      "ruolo": "D",
-      "pagato": 8,
-      "quotazione": null,
-      "fvm": 26,
-      "mv_foto": 6.25,
-      "fm_foto": 6.75,
       "fm_scorsa": null,
       "presenze_scorsa": null,
       "rigorista": null,
@@ -165,18 +152,19 @@
       "nota": "Ruolo D confermato da Armando il 13/09/2026 (anche sul sito della lega e' tra i difensori). Una notizia letta dalla routine del 13/09 lo indicava come secondo portiere della Fiorentina: probabile confusione con un omonimo, non cambiare ruolo."
     },
     {
-      "nome": "McTominay",
-      "squadra": "Napoli",
-      "ruolo": "C",
-      "pagato": 72,
+      "nome": "Kristensen T.",
+      "squadra": "Atalanta",
+      "ruolo": "D",
+      "pagato": null,
       "quotazione": null,
-      "fvm": 110,
-      "mv_foto": 5.75,
-      "fm_foto": 5.75,
+      "fvm": null,
+      "mv_foto": null,
+      "fm_foto": null,
       "fm_scorsa": null,
       "presenze_scorsa": null,
       "rigorista": null,
-      "stato": "in rosa"
+      "stato": "in rosa",
+      "nota": "Scambio del mercato di riparazione comunicato da Armando il 10/10/2026 (in entrata al posto di Maignan, Rrahmani, McTominay). Atalanta in prestito dall'Udinese secondo Wikipedia e le probabili Sky/Calciomercato del 9-10/10/2026; il listone Sky lo dava ancora Udinese. Squadra da confermare con Armando."
     },
     {
       "nome": "Barella",
@@ -275,6 +263,21 @@
       "presenze_scorsa": null,
       "rigorista": null,
       "stato": "in rosa"
+    },
+    {
+      "nome": "Nico Paz",
+      "squadra": "Como",
+      "ruolo": "C",
+      "pagato": null,
+      "quotazione": null,
+      "fvm": null,
+      "mv_foto": null,
+      "fm_foto": null,
+      "fm_scorsa": null,
+      "presenze_scorsa": null,
+      "rigorista": null,
+      "stato": "in rosa",
+      "nota": "Scambio del mercato di riparazione comunicato da Armando il 10/10/2026 (in entrata al posto di Maignan, Rrahmani, McTominay). Squadra: fonti guida asta 2026-27 (goal.com, ilnapolista.it); nel listone Sky e' C e T;A: ruolo Classic C da confermare."
     },
     {
       "nome": "Scamacca",
